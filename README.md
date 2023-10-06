@@ -41,6 +41,18 @@ See **[REST API examples](https://github.com/selabhvl/dat250-spring-counters-tod
 }
 ```
 
+### **GET** http://localhost:8080/todos/999
+If the Todo with the id 999 does not exist.
+```json
+{
+  "timestamp": "2023-10-06T11:52:27.842+00:00",
+  "status": 404,
+  "error": "Not Found",
+  "message": "Todo with the id 999 not found!",
+  "path": "/todos/999"
+}
+```
+
 ### **POST** http://localhost:8080/todos
 
 Body:
@@ -75,6 +87,26 @@ Response:
   "description": "Buy two eggs and ramen"
 }
 ```
+### PUT http://localhost:8080/todos/999
+If the Todo with the id 999 does not exist.
+
+Body:
+```json
+{
+  "summary": "Buy copious amounts of food",
+  "description": "Buy two eggs and ramen"
+}
+```
+Response:
+```json
+{
+  "timestamp": "2023-10-06T11:54:55.392+00:00",
+  "status": 404,
+  "error": "Not Found",
+  "message": "Todo with the id 999 not found!",
+  "path": "/todos/999"
+}
+```
 ### DELETE http://localhost:8080/todos/1
 ```json
 [
@@ -89,5 +121,16 @@ Response:
     "description": "Train weight lifting for five hours"
   }
 ]
+```
+### DELETE http://localhost:8080/todos/999
+If the Todo with the id 999 does not exist.
+```json
+{
+  "timestamp": "2023-10-06T11:56:29.114+00:00",
+  "status": 404,
+  "error": "Not Found",
+  "message": "Todo with the id 999 not found!",
+  "path": "/todos/999"
+}
 ```
 
