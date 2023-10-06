@@ -1,15 +1,17 @@
-# dat250-spring-counter-todos
+# dat250-spring-counter-todos starter project
 
 The test suite (**TodoControllerTest**) should run after your implementation (see badge below). You are not allowed to change the test class!
 
 [![TodoControllerTest](../../actions/workflows/main.yml/badge.svg)](../../actions/workflows/main.yml)
 
-Check the tab **Actions** in GitHub for more information and to initially activate the workflow run.
+Check the tab **Actions** in GitHub for more information and to activate the workflow run.
 
-**Careful:** The test class sends POST-Request to create TODOs without ids and expects the single created TODO to return with an id!
-See **[REST API examples](https://github.com/selabhvl/dat250-spring-counters-todos/tree/main#rest-api-examples)** below.
+## **Careful:**
+1. The test class sends POST-Request to create TODOs without IDs and expects the single created TODO to return with an ID!
+See **[REST API examples](https://github.com/selabhvl/dat250-spring-counters-todos/tree/main#rest-api-examples)** PUT and POST below.
+2. Furthermore, if a Todo with a given id should be retrieved, updated, or deleted and it does not exist, the tests expect a specific error message. See GET, PUT, and DELETE.
 
-# REST API examples
+## REST API examples
 
 ### **GET** http://localhost:8080/todos
 ```json
