@@ -15,16 +15,17 @@ repositories {
 }
 
 dependencies {
-    api("org.springframework.boot:spring-boot-starter-web:3.1.0")
-    api("com.google.code.gson:gson:2.9.0")
-    api("com.squareup.okhttp3:okhttp:4.11.0")
-    testImplementation("org.springframework.boot:spring-boot-starter-test:3.1.0")
+    api("org.springframework.boot:spring-boot-starter-web:3.2.1")//
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.3.0")
+
+    api("com.squareup.okhttp3:okhttp:4.12.0")
+    testImplementation("org.springframework.boot:spring-boot-starter-test:3.2.1")
 }
 
 group = "no.hvl.dat250.rest"
 version = "0.0.1-SNAPSHOT"
 description = "counters and todos"
-java.sourceCompatibility = JavaVersion.VERSION_17
+java.sourceCompatibility = JavaVersion.VERSION_20
 
 publishing {
     publications.create<MavenPublication>("maven") {

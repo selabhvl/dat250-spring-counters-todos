@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CounterController {
 
-	private Counters counters = new Counters();
+	private Counters counters = new Counters(0, 0);
 
 	@GetMapping("/counters")
 	public Counters getTodos() {
